@@ -1,0 +1,125 @@
+html, body {
+    margin: 5px;
+    padding: 5px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: x-large
+}
+
+header {
+    display: flex;
+    padding-top: 80px;
+    flex-direction: row;    
+    justify-content: center;
+}
+
+#header {
+    display: flex;
+    height: 300px;
+    width:100%;
+    padding-top: 20px;
+}
+
+
+.headerText {
+    position: relative;
+    font-size: x-large; 
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.headerText2 {
+    position: absolute;
+    margin-top: 180px;
+}
+
+.headerButton {
+    display: flex;
+    background-color: #bc1823;
+    color: white;
+    position: absolute;
+    font-size: large;
+    border-radius: 50% ;
+    padding: 10px 10px 10px 10px;
+    margin-top: 250px;
+
+}
+
+.headerPic { 
+        display: flex;
+        height: 300px;
+        width: 100%;
+        position: relative;
+        top:20px;
+        padding-left:70px;
+        border-radius: 50%;
+        margin: auto;
+        
+    } 
+
+
+/* Index Page */
+
+.whatWeOffer {
+    display: flex;
+    padding-top: 80px;
+    flex-direction: row;    
+    justify-content: center;
+}
+
+/* About Page */
+
+#span-1 {
+    background-color: #bc1823;
+    opacity: 0.8;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Contact Page */
+
+form {
+    display: flex;
+    position:absolute;
+    flex-direction: column;
+    /* background-color: #bc1823; */
+    border: 3px solid black;
+}
+
+.mapPic {
+    display: flex;
+    position: absolute;
+    height: 100px;
+    width:  100px;
+    margin-left: 170px;
+}
+
+/* Wider Screen  */
+
+ @media only screen and (min-width: 769px){
+
+.headerPic { 
+        display: flex;
+        height: 300px;
+        width: 100%;
+        position: relative;
+        top:20px;
+        padding-left:70px;
+        margin: auto; 
+        border-radius: 0%; 
+}
+
+ .mapPic {
+    display: flex;
+    position: absolute;
+    height: 300px;
+    width:  300px;
+    margin-left: 500px;
+    border-radius: 0%;
+ }
+} 
+
+

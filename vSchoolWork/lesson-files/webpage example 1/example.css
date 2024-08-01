@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.color-container {
+    display: flex;
+    justify-content: space-around
+}
+
+.color-container > div {
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+}
+
+div#purple {
+    background-color: rebeccapurple;
+}
+
+div#green {
+    background-color: forestgreen;
+}
+
+div#blue {
+    background-color: blue;
+}
+
+div#red {
+    background-color: firebrick;
+}
+
+div#white {
+    background-color: white;
+}
+
+.count-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.count-container > p {
+    margin: auto 20px;
+    font-size: 30px;
+}

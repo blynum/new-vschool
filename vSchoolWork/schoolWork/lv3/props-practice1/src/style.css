@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* margin: 0; */
+  font-family: "Poppins", sans-serif;
+}
+
+.gray {
+  color: #918e9b;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+nav {
+  /* position: absolute; */
+  height: 70px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+.nav--logo {
+  position: absolute;
+  width: 82.02px;
+  height: 25.35px;
+  left: 30px;
+  top: 22px;
+}
+.hero {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.hero--pic {
+  left: 77px;
+  top: 96px;
+  align-items: center;
+}
+
+.hero--header {
+  /* position: absolute; */
+  /* width: 347px; */
+  font-weight: bolder;
+  margin-bottom: 16px;
+  height: 40px;
+  left: 36px;
+  top: 360px;
+}
+
+.hero--text {
+  /* position: absolute; */
+  /* width: 320px; */
+  margin-top: 0;
+  height: 56px;
+  left: 36px;
+  top: 416px;
+}
+
+.cards-list {
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+}
+
+.card {
+  width: 175px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card--image {
+  width: 176px;
+  height: 235px;
+  left: 425px;
+  top: 521px;
+}
+
+.card--star {
+  height: 14px;
+}
+
+.card--stats {
+  padding: 10px;
+}
+
+.card--title {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.card--price {
+  margin-top: 2px;
+}
+
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
+}

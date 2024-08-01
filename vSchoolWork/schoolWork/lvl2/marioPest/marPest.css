@@ -1,0 +1,103 @@
+body {
+  background-color: #049cd8;
+}
+
+img {
+  width: 200px;
+}
+
+#gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr auto;
+  width: 100vw;
+  height:100vh;
+}
+
+header {
+  display: flex;
+  grid-column: 1/5;
+  grid-row: 1/2;
+  /* align-content: stretch; */
+  /* justify-content: space-around; */
+  background-image: url(https://www.clipartmax.com/png/full/142-1423362_mario-cloud-clipart-heart.png);
+  background-size: 100% 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 110px;
+  margin: auto;
+}
+
+.clouds {
+  display: flex;
+  width: 100%;
+  object-fit: fill;
+}
+
+main {
+  grid-column: 1/5;
+  grid-row: 2/4;
+}
+
+#formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-evenly;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.marioPic {
+  grid-column: 1/2;
+}
+.goomba {
+  grid-column: 2/3;
+}
+.bomb {
+  grid-column: 3/4;
+}
+.cheep {
+  grid-column: 4/5;
+}
+
+button {
+  color: white;
+  background-image: url(https://i.pinimg.com/474x/0f/ee/c8/0feec8c64185191cf646dfd82e5ea165.jpg);
+  background-color: #049cd8;
+  font-size: larger;
+}
+/* .website {
+  display: flex;
+  /* margin-left: 720px; */
+/* margin-bottom: 0px; */
+/* position: relative; */
+/* bottom: 30px; */
+/* } */
+
+/* .address { */
+/* position: relative; */
+/* display: flex; */
+/* left: 1290px; */
+/* bottom: 60px; */
+/* } */
+
+.footerText {
+  font-size: larger;
+  color: white;
+  text-align: center;
+  margin: auto;
+  margin-top: 130px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+footer {
+  justify-items: center;
+  display: grid;
+  align-content: stretch;
+  justify-content: space-around;
+  grid-row: 4/5;
+  grid-column: 1/5;
+  background-image: url(https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/5cde149a93033d9.png);
+  background-size: 100% 100% 100% 100%;
+}

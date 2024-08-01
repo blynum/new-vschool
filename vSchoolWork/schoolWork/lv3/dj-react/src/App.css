@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+header {
+  font-size: 80px;
+  text-align: center;
+  margin: auto;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: white;
+  background-image: url(https://timelinecovers.pro/facebook-cover/download/dj-board-facebook-cover.jpg);
+}
+
+.box {
+  border: 2px solid rebeccapurple;
+  border-radius: 5px;
+  /* height: 300px; */
+}

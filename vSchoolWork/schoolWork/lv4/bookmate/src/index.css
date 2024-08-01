@@ -1,0 +1,109 @@
+/* index.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav {
+  margin-top: 1rem;
+}
+
+header a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+header a:hover {
+  background-color: white;
+  color: #333;
+}
+
+.container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.search-bar {
+  margin: 2rem 0;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.search-bar button:hover {
+  background-color: #555;
+}
+
+.book-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 1rem;
+  padding: 1rem;
+  width: 200px;
+  text-align: left;
+}
+
+.book-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.book-card p {
+  margin: 0.5rem 0;
+}
+
+.book-card a {
+  display: block;
+  margin-top: 1rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.book-card a:hover {
+  background-color: #ddd;
+}

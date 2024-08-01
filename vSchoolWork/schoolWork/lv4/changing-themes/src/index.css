@@ -1,0 +1,118 @@
+/* src/index.css */
+html,
+body {
+  height: 100%; /* Ensures that the html and body tags take up the full viewport height */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents any scrolling caused by excess height */
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar,
+.footer,
+.body {
+  padding: 20px;
+}
+
+.navbar.light,
+.footer.light,
+.body.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.navbar.dark,
+.footer.dark,
+.body.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px; /* Adjust padding to space out navbar items */
+  background-color: #e0f7fa; /* Optional: Background color for light theme */
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Full width to space items evenly */
+}
+
+.navbar ul li {
+  padding: 10px;
+  text-align: center;
+  background-color: inherit;
+  border: 1px solid transparent; /* Optional: Border for items */
+}
+
+.navbar.light ul li {
+  color: #000;
+}
+
+.navbar.dark ul li {
+  color: #fff;
+}
+
+.navbar,
+.footer {
+  padding: 10px 0;
+  flex-shrink: 0; /* Prevents the navbar and footer from shrinking */
+}
+
+.body {
+  flex-grow: 1; /* Ensures the body grows to take up any remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body {
+  min-height: 80vh; /* Adjust based on your design needs */
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+p {
+  margin: 0 0 10px 0;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+}
+
+/* Adjust the dropdown position specifically for funky theme */
+.funky {
+  align-items: flex-start; /* Adjust based on desired layout */
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .navbar,
+  .footer,
+  .body {
+    padding: 5px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+}

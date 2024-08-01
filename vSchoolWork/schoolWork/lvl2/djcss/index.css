@@ -1,0 +1,117 @@
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box1 {
+  width: 300px;
+  height: 300px;
+  background-color: aqua;
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 10px 10px 5px 0 #999;
+  border-radius: 10%;
+  transition: border-radius 1s linear;
+}
+
+.box1:hover {
+  box-shadow: none;
+  border-radius: 70px;
+  background-color: blue;
+}
+.box2 {
+  width: 300px;
+  height: 300px;
+  background-color: purple;
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 10px 10px 5px 0 #999;
+  border-radius: 10%;
+  transition: width 1s linear, background-color 1s linear;
+}
+
+.box2:hover {
+  box-shadow: none;
+  border-radius: 0;
+  background-color: pink;
+  width: 500px;
+}
+.box3 {
+  width: 300px;
+  height: 300px;
+  background-color: green;
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 10px 10px 5px 0 #999;
+  border-radius: 10%;
+  transition: border-radius 1s linear, background-color 1s linear;
+}
+
+/* .ref {
+  text-decoration: none;
+} */
+
+.ref:hover::after {
+  font-weight: bold;
+  font-size: xx-large;
+  content: "Bang!";
+  transition: content 1s linear;
+}
+
+.box3:hover {
+  box-shadow: 0;
+  border-radius: 0px 0px 50px 30px;
+  background-color: greenyellow;
+  content: "Boom!";
+}
+
+.box4 {
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 10px 10px 5px 0 #999;
+  border-radius: 10%;
+  transition: padding 1s linear, background-color 1s linear;
+}
+
+.box4:hover {
+  padding: 50px;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: rgb(255, 191, 0);
+}
+.box5 {
+  width: 300px;
+  height: 300px;
+  background-color: orange;
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 10px 10px 5px 0 #999;
+  border-radius: 10%;
+  transition: background-color 1s linear, border 1s linear;
+}
+
+.box5:hover {
+  box-shadow: none;
+  border-radius: 0;
+  background-color: orangered;
+  border: 5px dotted purple;
+}
+.box6 {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(230, 35, 187);
+  margin: auto;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 10px 10px 5px 0 #999;
+  border-radius: 10%;
+  transition: background-color 1s linear, box-shadow 1s linear;
+}
+
+.box6:hover {
+  box-shadow: 20px 20px 10px 10px rgb(215, 14, 14);
+  border-radius: 0;
+  background-color: rgb(255, 213, 0);
+}

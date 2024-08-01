@@ -1,0 +1,10 @@
+
+.square {
+    display: flex;
+    border: 5px solid black;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+
+}
+

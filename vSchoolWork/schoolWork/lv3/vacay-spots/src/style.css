@@ -1,0 +1,9 @@
+.app--title {
+  color: blue;
+}
+
+.spot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

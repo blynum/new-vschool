@@ -1,0 +1,25 @@
+.container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 200px 40px;
+}
+
+.header {
+    background-color: darksalmon;
+    grid-column: 1;
+    grid-column-end: 3;
+}
+
+.nav {
+    background-color: aquamarine;
+}
+
+.content {
+    background-color: brown;
+}
+
+.footer {
+    background-color: aqua;
+    grid-column: 1 / -1;
+}

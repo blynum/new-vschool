@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box; 
+    font-size: 0px;
+}
+
+/* Mobile Design */
+
+.lightpink {
+    background-color: #F5C6D6;
+    border: 5px solid white;
+    height: 100px;
+}
+
+.pink {
+    display: flex;
+    background-color: #EE2E84;
+    border: 5px solid white;
+    height: 100px;
+}
+.pink1 {
+    display: flex;
+    background-color: #EE2E84;
+    border: 5px solid white;
+    height: 100px;
+}
+.pink2 {
+    display: flex;
+    background-color: #EE2E84;
+    border: 5px solid white;
+    height: 100px;
+
+}
+.pink3 {
+    display: flex;
+    background-color: #EE2E84;
+    border: 5px solid white;
+    height: 100px;
+}
+
+.blue {
+    background-color: #85CFD8;
+    border: 5px solid white;
+    height: 100px;
+}
+.blue1 {
+    background-color: #85CFD8;
+    border: 5px solid white;
+    height: 100px;
+}
+
+.green {
+    background-color: #8DC63F;
+    border: 5px solid white;
+    height: 100px;
+}
+
+.orange {
+    background-color: #E76E34;
+    border: 5px solid white;
+    height: 100px;
+} 
+
+
+/* 768px or larger screen */
+
+@media only screen and (min-width: 769px){
+
+.lightpink {
+    display: flex;
+    background-color: #F5C6D6 ;
+    border: 5px solid white;
+    height: 300px;
+}
+
+.pink {
+    display: inline-block;
+    background-color: #EE2E84;
+    border: 5px solid white;
+    height: 300px;
+    width: 25%;
+}
+.pink1 {
+    display: inline-block;
+    background-color: #EE2E84;
+    border: 5px solid white;
+    height: 300px;
+    width: 25%;
+}
+.pink2 {
+    display: inline-block;
+    background-color: #EE2E84;
+    border: 5px solid white;
+    height: 300px;
+    width: 25%;
+
+}
+.pink3 {
+    display: inline-block;
+    background-color: #EE2E84;
+    border: 5px solid white;
+    height: 300px;
+    width: 25%;
+}
+
+.blue {
+    display: inline-block;
+    background-color: #85CFD8;
+    border: 5px solid white;
+    height: 300px;
+    width: 50%;
+    
+}
+.blue1 {
+    display: inline-block;
+    background-color: #85CFD8;
+    border: 5px solid white;
+    height: 300px;
+    width: 50%;
+    
+}
+
+.green {
+    display: inline-block ;
+    background-color: #8DC63F;
+    border: 5px solid white;
+    height: 300px;
+    width: 75%;
+}
+
+.orange {
+    display: inline-block;
+    background-color: #E76E34;
+    border: 5px solid white;
+    height: 300px;
+    width: 25%;
+
+}
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="trav.css" />
+    <title>Travel Form</title>
+  </head>
+  <body>
+    <header><h1>Travel Form</h1></header>
+    <div class="pic">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSidInhs7MrVD1p2sKj2KLZBqX6q0wiofQ9LV3EGAedi4pZgAmIfN04wEEtK1JV-M45MtY&usqp=CAU"
+        alt="Banner"
+      />
+    </div>
+    <div class="form">
+      <form name="travelForm">
+        First Name: <input type="text" name="firstName" /> 
+        Last Name:  <input type="text" name="lastName" />
+        <p>Age:</p><input type="number" name="age" />
+        <p>Gender:</p>
+        Female <input type="radio" name="gender" value="Female" /> 
+        Male   <input type="radio" name="gender" value="Male" />
+        <p>Where Would You Like to Go?</p>
+        <select name="city">
+          <option value="Mexico">Mexico</option>
+          <option value="Montreal">Montreal</option>
+          <option value="California">California</option>
+        </select>
+        <p>Dietry Restrictions: Select all the apply</p>
+        Vegetarian:
+        <input type="checkbox" value="Vegetarian" name="diet" /> Kosher:
+        <input type="checkbox" value="Kosher" name="diet" /> Lactose-Free:
+        <input type="checkbox" value="lactoseFree" name="diet" />
+        <br />
+        <button>Submit</button>
+      </form>
+    </div>
+
+    <script src="trav.js"></script>
+  </body>
+</html>

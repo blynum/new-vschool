@@ -1,0 +1,39 @@
+header {
+  text-align: center;
+}
+
+.addCal {
+  text-align: center;
+  background-color: aqua;
+  border: 2px solid black;
+  padding-bottom: 28px;
+  display: grid;
+  align-items: stretch;
+  justify-content: center;
+  margin-left: 463px;
+  margin-right: 463px;
+}
+
+.subCal {
+  text-align: center;
+  background-color: aquamarine;
+  border: 2px solid black;
+  padding-bottom: 28px;
+  display: grid;
+  align-items: stretch;
+  justify-content: center;
+  margin-left: 463px;
+  margin-right: 463px;
+}
+
+.mulCal {
+  text-align: center;
+  background-color: rgb(191, 251, 251);
+  border: 2px solid black;
+  padding-bottom: 28px;
+  display: grid;
+  align-items: stretch;
+  justify-content: center;
+  margin-left: 463px;
+  margin-right: 463px;
+}

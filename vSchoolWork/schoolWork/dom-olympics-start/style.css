@@ -1,0 +1,71 @@
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.new-span {
+    margin:auto;
+    position:absolute;
+    left: 360px;
+    right:0;
+    color: peru
+}
+
+.name {
+    color: peachpuff;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 10px 0px;
+    padding: 20px;
+}
+
+
+#main {
+    margin: 30px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.message {
+    padding: 5px;
+}
+
+.h3 {
+    font-size: small;
+}
+
+.theme-one.right {
+    align-self: flex-end;
+    background-color: lightblue;
+}
+
+.theme-one.left {
+    align-self: flex-start;
+    background-color: burlywood;
+}
+.theme-two.right {
+    align-self: flex-end;
+    background-color: red;
+}
+
+.theme-two.left {
+    align-self: flex-start;
+    background-color: black;
+    color: white;
+}
+.theme-three.right {
+    align-self: flex-end;
+    background-color: purple;
+    color: white;
+}
+
+.theme-three.left {
+    align-self: flex-start;
+    background-color: green;
+    color: white;
+}

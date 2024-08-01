@@ -1,0 +1,89 @@
+{
+  "menu": [
+    {
+      "appetizers": [
+        {
+          "name": "wings",
+          "ingredients": ["Chicken", "Sauce"],
+          "description": "Delicous Chicken Wings"
+        },
+        {
+          "name": "nachos",
+          "ingredients": ["chips", "cheese", "salsa"],
+          "description": "Crunchy, Cheesy, Spicy"
+        },
+        {
+          "name": "fruit bowl",
+          "ingredients": ["apple slices", "orange slices", "blueberries"],
+          "description": "Fresh, Crispy and Natural"
+        }
+      ]
+    },
+    {
+      "cold sandwich": [
+        {
+          "name": "turkey sandwich",
+          "ingredients": ["bread", "turkey", "cheese"],
+          "description": "Simple Sandwich"
+        },
+        {
+          "name": "Peanut Butter",
+          "ingredients": ["bread", "peanet butter", "jelly"],
+          "description": "Old School Favorite"
+        },
+        {
+          "name": "ham sandwich",
+          "ingredients": ["bread", "ham", "cheese"],
+          "description": "Simple Sandwich #2"
+        }
+      ]
+    },
+    {
+      "hot sandwich": [
+        {
+          "name": "fish sandwich",
+          "ingredients": ["fish", "bread", "cheese"],
+          "description": "Sandwich from the Sea"
+        },
+        {
+          "name": "meatball sandwich",
+          "ingredients": ["meatball", "speghetti sause", "bread"],
+          "description": "Messy and Tasty"
+        },
+        {
+          "name": "hamburger",
+          "ingredients": ["hamburger", "pickles", "bread"],
+          "description": "Fresh off the grill"
+        }
+      ]
+    },
+    {
+      "dessert": [
+        {
+          "name": "ice cream",
+          "ingredients": ["milk", "cream", "sugar", "ice"],
+          "description": "Sweet and Cold"
+        },
+        {
+          "name": "cake",
+          "ingredients": ["flour", "milk", "sugar", "eggs", "butter"],
+          "description": "Sweet and Tasty"
+        }
+      ]
+    },
+    {
+      "drinks": [
+        {
+          "name": "water",
+          "ingredients": ["water", "ice"],
+          "description": "Simple and Refreshing"
+        },
+        {
+          "name": "lemondade",
+          "ingredients": ["water", "lemons", "sugar", "ice"],
+          "description": "Sweet, Sour, and Refreshing"
+        }
+      ]
+    }
+  ]
+}

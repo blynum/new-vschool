@@ -1,0 +1,30 @@
+
+header {
+    color: blue;
+    font-size: 55px;
+}
+
+p {
+    font-size: 30px;
+}
+
+.kitten-stuff {
+    font-family:'Courier New', Courier, monospace;
+}
+
+.click {
+
+    font-size: 20px;
+    background-color:salmon;
+    border: 3px solid black;
+    padding: 15px;  
+    margin: 20px;
+    
+}
+
+.kittens {
+    height: 300px;
+    width: 400px;
+    border: 5px solid salmon
+   
+}

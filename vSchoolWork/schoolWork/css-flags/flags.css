@@ -1,0 +1,205 @@
+
+h1 {
+    display: inline-block;
+}
+
+
+.flag {
+    height: 100%;
+    width: 100%;
+}
+
+.aspect2-3{
+    display: flex;
+    width: 300px;
+    height: 200px;
+    border: 3px solid black;
+    margin-top: 50px;
+}
+
+/* France Flag */
+    .france-blue {
+        background-color: #002495;
+     }
+    .white {
+        background-color: #FFFFFF;
+    }
+    .red {
+        background-color: #ED2938;
+    }
+
+    /* Germany Flag */
+ .germany {
+     display: flex;
+     height: 200px;
+     width: 333px;
+     margin-top: 50px;
+     border: 3px solid black;
+ }
+
+     .germany-black {
+        position: absolute;
+        background-color: #000000;
+        height: 68px;
+        width: 333px;
+
+    }
+     .germany-yellow {
+        background-color: #FFCE00;
+        position: absolute;
+        height: 68px;
+        width: 333px;
+        margin-top: 133px;
+    }
+    .germany-red {
+        background-color: #DE0002;
+        position: absolute;
+        height: 68px;
+        width: 333px;
+        margin-top: 68px;
+    }
+
+/* Madagascar Flag */
+.mad-red {
+    background-color: #FC3E32;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    margin-left: 100px;
+}
+
+.mad-green {
+    background-color: #007E39;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+/*  Switzerland Flag */
+.swiss {
+    display: flex;
+    height: 225px;
+    width: 225px;
+    margin-top: 50px;
+    border: 3px solid black;
+}
+.swiss-red {
+    background-color: #FF0002;
+}
+.swiss-white1 {
+    position: absolute;
+    background-color: #FFFFFF;
+    left: 75px;
+    margin-top: 100px;
+    width: 100px;
+    height: 25px;
+}
+.swiss-white2 {
+    position: absolute;
+    background-color: #FFFFFF;
+    left: 110px;
+    margin-top: 65px;
+    width: 25px;
+    height: 100px;
+}
+
+/* Sweden Flag */
+.sweden {
+    display: flex;
+    height: 300px;
+    width: 600px;
+    margin-top: 50px;
+    border: 3px solid white;
+}
+.sweden-blue {
+    position: absolute;
+   background-color: #0269A6;
+   height: 300px;
+   width: 600px;
+}
+.sweden-yellow1 {
+   position: absolute;
+   background-color: #FECC00;
+   height: 50px;
+   width: 600px;
+   margin-top: 135px;
+}
+.sweden-yellow2 {
+    position: absolute;
+    background-color: #FECC00;
+    height: 300px;
+    width: 50px;
+    margin-left: 150px;
+}
+
+/* Gambia Flag */
+.gambia-red {
+    position: absolute;
+    background-color: #CE1127;
+    height: 65px;
+    width: 300px;
+}
+.gambia-white {
+    background-color: #FFFFFF;
+}
+.gambia-blue{
+    position: absolute;
+    background-color: #0D1D8B ;
+    height: 50px;
+    width: 300px;
+    margin-top: 75px;
+}
+.gambia-green{
+    position:absolute;
+    background-color: #3B7827;
+    height: 65px;
+    width: 300px;
+    margin-top: 135px;
+}
+
+/* Japan Flag */
+.japan-red {
+    position: absolute;
+    background-color: #BC022C;
+    border-radius: 60%;
+    width: 125px;
+    height: 125px;
+    margin-top: 35px;
+    margin-left: 85px;
+}
+
+/* Niger Flag */
+
+.niger {
+    display: flex;
+    height: 300px;
+    width: 350px;
+    margin-top: 50px;
+    border: 3px solid black;
+}
+.niger-orange {
+    position: absolute;
+    background-color: #E15307;
+    height: 100px;
+    width: 350px;
+}
+.niger-circle {
+    position: absolute;
+    background-color: #E15307;
+    border-radius: 60%;
+    width: 90px;
+    height: 90px;
+    margin-top: 105px;
+    margin-left: 130px;
+}
+.niger-green {
+    position: absolute;
+    background-color: #10AF2A;
+    height: 100px;
+    width: 350px;
+    margin-top: 200px;
+}
+
+
+

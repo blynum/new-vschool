@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.box-container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.box {
+  display: flex;
+  flex-basis: calc(33.33% - 8px);
+  aspect-ratio: 1/1;
+  /*  height: 150px;
+  width: 150px; */
+  border: 1px solid black;
+  /* margin: 4px; */
+}
+
+/* .box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-right: 4px;
+  border-radius: 5px;
+} */

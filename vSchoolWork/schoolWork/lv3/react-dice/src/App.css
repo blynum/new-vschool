@@ -1,0 +1,30 @@
+.App {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+header {
+  font-size: 70px;
+  grid-row: 1;
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.die {
+  border: 2px solid rebeccapurple;
+  border-radius: 5px;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  height: 20px;
+  width: 150px;
+  margin: 10px;
+}

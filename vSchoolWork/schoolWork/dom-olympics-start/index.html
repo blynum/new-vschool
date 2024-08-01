@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM Olympics</title>
+</head>
+<body>
+    <header id="header1" ></header>
+    <label>Theme</label>
+    <select id="theme-drop-down">
+
+        <option value="theme-one" selected>blue/brown</option>
+        <option value="theme-two" >red/black</option>
+        <option value="theme-three">green/purple</option>
+    </select>
+    <div id="main">
+        <!-- <button id='clear-button'>clear</button> -->
+        <input type="button" value="Clear" id="clear">    
+    <div class="messages">
+            <div id="message-left1" class="message left theme-one">
+                I have something serious to talk about
+            </div>
+            <div id="message-right1" class="message right theme-one">
+                I don't want to talk
+            </div>
+            <div id="message-left2" class="message left theme-one">
+                You have to, you're the police
+            </div>
+            <div id=message-right2 class="message right theme-one">
+                I'm just a simple farmer
+            </div>
+        </div>
+        <form name="message">
+            <input type="text" name="newMessage" placeholder="Type Your Message"/>
+            <button>Send</button>
+        </form>
+    </div>
+   
+    <script src="index.js"></script>
+</body>
+</html>
