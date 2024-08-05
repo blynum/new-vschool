@@ -1,4 +1,3 @@
-/* src/App.css */
 .App {
   text-align: center;
 }
@@ -13,4 +12,23 @@ input {
 
 button {
   margin: 10px;
+}
+
+/* Styles for the images */
+img {
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Styles for individual ugly thing items */
+.ugly-thing-item {
+  margin-bottom: 20px;
+}
+
+/* Styles for the edit form */
+.edit-form {
+  margin-top: 10px;
+  text-align: center;
 }
