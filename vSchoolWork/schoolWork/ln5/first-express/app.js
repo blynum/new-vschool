@@ -3,8 +3,8 @@ const app = express();
 
 //1. Endpoint (mount path)
 //2. CallBack function
-app.get('/', (req, res) => {
-    res.send("Hello world!");
+app.get('/user', (req, res) => {
+    res.send({ name: "jane", age: 35 });
 });
 
 
