@@ -1,10 +1,21 @@
 const express = require("express");
 const app = express();
 
+//Fake Data
+const users = [
+    { name: 'joe', age: 20 },
+    { name: 'moe', age: 24 },
+    { name: 'betty', age: 20 },
+    { name: 'sarah', age: 20 },
+    { name: 'mike', age: 20 }
+];
+
+
+
 //1. Endpoint (mount path)
 //2. CallBack function
-app.get('/user', (req, res) => {
-    res.send({ name: "jane", age: 35 });
+app.get('/users', (req, res) => {
+    res.send(users);
 });
 
 
