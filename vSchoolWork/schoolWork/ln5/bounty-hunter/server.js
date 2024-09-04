@@ -29,6 +29,37 @@ app.post('/bounty', (req, res) => {
 });
 
 
+//This route will delete a bounty
+app.delete('/bounty/:id', (req, res) => {
+    const { id } = req.params;
+    const index = bounties.findIndex(bounty => bounty.id === id);
+
+    if (index !== -1) {
+        bounties.splice(index, 1);
+        res.status(200).json({ message: `Bounty with id ${id} has been deleted.` });
+    } else {
+        res.status(404).json({ message: `Bounty with id ${id} not found.` });
+    }
+});
+
+//This route will update a bounty
+app.put('/bounty/:id', (req, res) => {
+    const { id } = req.params;
+    const bountyIndex = bounties.findIndex(bounty => bounty.id === id);
+
+    if (bountyIndex !== -1) {
+        const updatedBounty = {
+            ...bounties[bountyIndex],
+            ...req.body // Use the spread operator to update only the fields provided in the request
+        };
+        bounties[bountyIndex] = updatedBounty;
+        res.status(200).json(updatedBounty);
+    } else {
+        res.status(404).json({ message: `Bounty with id ${id} not found.` });
+    }
+});
+
+
 //Server listening
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
