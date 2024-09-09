@@ -12,6 +12,16 @@ function App() {
     type: "Jedi",
   });
 
+  // State for managing the editing process
+  const [editBountyId, setEditBountyId] = useState(null);
+  const [updatedBounty, setUpdatedBounty] = useState({
+    firstName: "",
+    lastName: "",
+    living: true,
+    bountyAmount: 0,
+    type: "Jedi",
+  });
+
   // Fetch bounties on component mount
   useEffect(() => {
     axios
@@ -24,11 +34,20 @@ function App() {
       );
   }, []);
 
-  // Handle form input changes
+  // Handle form input changes for creating a new bounty
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewBounty({
       ...newBounty,
+      [name]: value,
+    });
+  };
+
+  // Handle form input changes for updating an existing bounty
+  const handleUpdateInputChange = (e) => {
+    const { name, value } = e.target;
+    setUpdatedBounty({
+      ...updatedBounty,
       [name]: value,
     });
   };
@@ -52,7 +71,29 @@ function App() {
       .catch((error) => console.error("Error creating a bounty", error));
   };
 
-  // Handle delete bounty
+  // Handle initiating the update by showing the form
+  const handleInitiateUpdate = (bounty) => {
+    setEditBountyId(bounty.id); // Set the bounty to be updated
+    setUpdatedBounty(bounty); // Pre-fill the form with the current values
+  };
+
+  // Handle updating the bounty
+  const handleUpdateBounty = (e) => {
+    e.preventDefault();
+    axios
+      .put(`http://localhost:3000/bounty/${editBountyId}`, updatedBounty)
+      .then((response) => {
+        setBounties(
+          bounties.map((bounty) =>
+            bounty.id === editBountyId ? response.data : bounty
+          )
+        );
+        setEditBountyId(null); // Close the update form after updating
+      })
+      .catch((error) => console.error("Error updating bounty", error));
+  };
+
+  // Handle deleting a bounty
   const handleDeleteBounty = (id) => {
     axios
       .delete(`http://localhost:3000/bounty/${id}`)
@@ -60,25 +101,6 @@ function App() {
         setBounties(bounties.filter((bounty) => bounty.id !== id));
       })
       .catch((error) => console.error("Error deleting bounty", error));
-  };
-
-  // Handle updating a bounty
-  const handleUpdateBounty = (id) => {
-    const updatedBounty = {
-      firstName: "Updated First Name", // Update these values as per user input or a form
-      lastName: "Updated Last Name",
-      living: true,
-      bountyAmount: 500000,
-      type: "Jedi",
-    };
-    axios
-      .put(`http://localhost:3000/bounty/${id}`, updatedBounty)
-      .then((response) => {
-        setBounties(
-          bounties.map((bounty) => (bounty.id === id ? response.data : bounty))
-        );
-      })
-      .catch((error) => console.error("Error updating bounty", error));
   };
 
   return (
@@ -118,6 +140,46 @@ function App() {
         <button type="submit">Create Bounty</button>
       </form>
 
+      {/* Form to Update Bounty (Only shows if editing a bounty) */}
+      {editBountyId && (
+        <form onSubmit={handleUpdateBounty}>
+          <h3>Update Bounty</h3>
+          <input
+            type="text"
+            name="firstName"
+            value={updatedBounty.firstName}
+            onChange={handleUpdateInputChange}
+            placeholder="First Name"
+            required
+          />
+          <input
+            type="text"
+            name="lastName"
+            value={updatedBounty.lastName}
+            onChange={handleUpdateInputChange}
+            placeholder="Last Name"
+            required
+          />
+          <input
+            type="number"
+            name="bountyAmount"
+            value={updatedBounty.bountyAmount}
+            onChange={handleUpdateInputChange}
+            placeholder="Bounty Amount"
+            required
+          />
+          <select
+            name="type"
+            value={updatedBounty.type}
+            onChange={handleUpdateInputChange}
+          >
+            <option value="Jedi">Jedi</option>
+            <option value="Sith">Sith</option>
+          </select>
+          <button type="submit">Update Bounty</button>
+        </form>
+      )}
+
       {/* List of Bounties */}
       <ul>
         {bounties.map((bounty) => (
@@ -127,9 +189,7 @@ function App() {
             <button onClick={() => handleDeleteBounty(bounty.id)}>
               Delete
             </button>
-            <button onClick={() => handleUpdateBounty(bounty.id)}>
-              Update
-            </button>
+            <button onClick={() => handleInitiateUpdate(bounty)}>Update</button>
           </li>
         ))}
       </ul>

@@ -1,16 +1,17 @@
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 const cors = require('cors');
-
-
+const bounties = require('./bountyData'); // Make sure you're importing the data correctly
 
 const app = express();
+
+
 app.use(express.json()); // Middleware to parse JSON bodies
 app.use(cors()); // Enable CORS
 
 
 //The array for my temporary database
-let bounties = [];
+//let bounties = [];
 
 
 //This route will retrieve all bounties
