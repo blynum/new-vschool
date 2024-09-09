@@ -3,9 +3,11 @@ const { v4: uuidv4 } = require('uuid');
 const cors = require('cors');
 
 
+
 const app = express();
 app.use(express.json()); // Middleware to parse JSON bodies
 app.use(cors()); // Enable CORS
+
 
 //The array for my temporary database
 let bounties = [];
