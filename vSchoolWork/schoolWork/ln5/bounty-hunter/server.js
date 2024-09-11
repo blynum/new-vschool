@@ -21,13 +21,14 @@ app.get('/bounty', (req, res) => {
 
 //This route will add a new bounty
 app.post('/bounty', (req, res) => {
+    let { firstName, lastName, living, bountyAmount, type } = req.body
     const newBounty = {
         id: uuidv4(), // Assign a unique ID
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        living: req.body.living,
-        bountyAmount: req.body.bountyAmount,
-        type: req.body.type
+        firstName,
+        lastName,
+        living,
+        bountyAmount,
+        type
     };
     bounties.push(newBounty);
     res.status(201).json(newBounty); // Return the newly created bounty
@@ -46,6 +47,7 @@ app.delete('/bounty/:id', (req, res) => {
         res.status(404).json({ message: `Bounty with id ${id} not found.` });
     }
 });
+
 
 //This route will update a bounty
 app.put('/bounty/:id', (req, res) => {
