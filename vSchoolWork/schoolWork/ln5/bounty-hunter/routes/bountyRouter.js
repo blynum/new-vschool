@@ -3,7 +3,7 @@ const router = express.Router();
 const BountyModel = require('../models/bountyModel'); // Import Mongoose model
 
 // This route will retrieve all bounties
-router.get('/bounty', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const bounties = await BountyModel.find(); // Fetch all bounties from MongoDB
         res.status(200).json(bounties);
@@ -13,7 +13,7 @@ router.get('/bounty', async (req, res) => {
 });
 
 // This route will add a new bounty
-router.post('/bounty', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const { firstName, lastName, living, bountyAmount, type } = req.body;
         const newBounty = new BountyModel({ firstName, lastName, living, bountyAmount, type });
@@ -26,7 +26,7 @@ router.post('/bounty', async (req, res) => {
 });
 
 // This route will delete a bounty
-router.delete('/bounty/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const deletedBounty = await BountyModel.findByIdAndDelete(id); // Delete bounty by ID
@@ -42,7 +42,7 @@ router.delete('/bounty/:id', async (req, res) => {
 });
 
 // This route will update a bounty
-router.put('/bounty/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const updatedBounty = await BountyModel.findByIdAndUpdate(id, req.body, { new: true }); // Update bounty by ID and return new document

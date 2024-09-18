@@ -25,7 +25,7 @@ function App() {
   // Fetch bounties on component mount
   useEffect(() => {
     axios
-      .get("http://localhost:3000/bounty")
+      .get("http://localhost:3000/bounties")
       .then((response) => {
         setBounties(response.data);
       })
@@ -56,7 +56,7 @@ function App() {
   const handleCreateBounty = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/bounty", newBounty)
+      .post("http://localhost:3000/bounties", newBounty)
       .then((response) => {
         setBounties([...bounties, response.data]);
         // Clear the form after submitting
@@ -73,7 +73,7 @@ function App() {
 
   // Handle initiating the update by showing the form
   const handleInitiateUpdate = (bounty) => {
-    setEditBountyId(bounty.id); // Set the bounty to be updated
+    setEditBountyId(bounty._id); // MongoDB uses _id, not id
     setUpdatedBounty(bounty); // Pre-fill the form with the current values
   };
 
@@ -81,11 +81,11 @@ function App() {
   const handleUpdateBounty = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:3000/bounty/${editBountyId}`, updatedBounty)
+      .put(`http://localhost:3000/bounties/${editBountyId}`, updatedBounty)
       .then((response) => {
         setBounties(
           bounties.map((bounty) =>
-            bounty.id === editBountyId ? response.data : bounty
+            bounty._id === editBountyId ? response.data : bounty
           )
         );
         setEditBountyId(null); // Close the update form after updating
@@ -96,9 +96,9 @@ function App() {
   // Handle deleting a bounty
   const handleDeleteBounty = (id) => {
     axios
-      .delete(`http://localhost:3000/bounty/${id}`)
+      .delete(`http://localhost:3000/bounties/${id}`)
       .then(() => {
-        setBounties(bounties.filter((bounty) => bounty.id !== id));
+        setBounties(bounties.filter((bounty) => bounty._id !== id)); // MongoDB uses _id
       })
       .catch((error) => console.error("Error deleting bounty", error));
   };
@@ -183,10 +183,10 @@ function App() {
       {/* List of Bounties */}
       <ul>
         {bounties.map((bounty) => (
-          <li key={bounty.id}>
+          <li key={bounty._id}>
             {bounty.firstName} {bounty.lastName} - ${bounty.bountyAmount} -{" "}
             {bounty.type} - {bounty.living ? "Alive" : "Dead"}
-            <button onClick={() => handleDeleteBounty(bounty.id)}>
+            <button onClick={() => handleDeleteBounty(bounty._id)}>
               Delete
             </button>
             <button onClick={() => handleInitiateUpdate(bounty)}>Update</button>

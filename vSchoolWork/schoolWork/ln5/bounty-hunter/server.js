@@ -1,25 +1,34 @@
 const express = require('express');
-
 const cors = require('cors');
-const bounties = require('./bountyData'); // Make sure you're importing the data correctly
 const mongoose = require('mongoose');
-const cors = require('cors');
-const Bounty = require('./models/bountyModel'); // Import the Bounty model
+const morgan = require('morgan');
+require('dotenv').config();
+const bountyRoutes = require('./routes/bountyRouter');
 
 const app = express();
 
+// Middleware
+app.use(express.json());
+app.use(cors());
+app.use(morgan('dev'));
 
-app.use(express.json()); // Middleware to parse JSON bodies
-app.use(cors()); // Enable CORS
+// MongoDB connection
+const connectToMongoDB = async () => {
+    try {
+        await mongoose.connect(process.env.MONGODB_URI);
+        console.log('Connected to MongoDB');
+    } catch (err) {
+        console.error('Failed to connect to MongoDB', err);
+    }
+};
 
-//Connect to MongoDB (if not already done in another file)
-mongoose.connect('mongodb://localhost:27017/bountyDB', { useNewUrlParser: true, useUnifiedTopology: true });
+connectToMongoDB();
 
+// Routes
+app.use('/bounties', bountyRoutes);
 
-
-//Server listening
+// Server listening
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
-
