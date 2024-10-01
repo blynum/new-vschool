@@ -86,4 +86,20 @@ movieRouter.put("/:movieId", async (req, res, next) => {
     }
 });
 
+movieRouter.post("/movieWithDirector/:directorId", async (req, res, next) => {
+    // ... (error handling)
+
+    // 1. Extract director ID from request parameter
+    req.body.author = req.params.directorId;
+
+    // 2. Create new movie with linked director ID
+    const newMovie = new Movie(req.body);
+
+    // 3. Save the new movie with director reference
+    const savedMovie = await newMovie.save();
+
+    // 4. Send successful response with saved movie
+    return res.status(201).send(savedMovie);
+});
+
 module.exports = movieRouter;

@@ -20,8 +20,9 @@ const connectToMongoDB = async () => {
 connectToMongoDB();
 
 //Routes
-app.use("/movies", require("./routes/movieRouter"))
-app.use("/tvShows", require("./routes/tvShowRouter"))
+app.use("/movies", require("./routes/movieRouter"));
+app.use("/tvShows", require("./routes/tvShowRouter"));
+app.use("/directors", require("./routes/directorRouter"))
 
 
 app.use((err, req, res, next) => {
