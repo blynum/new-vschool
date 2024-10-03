@@ -3,6 +3,7 @@ const app = express();
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const { expressjwt } = require('express-jwt')
 
 
 //Middleware
@@ -25,6 +26,8 @@ connectToMongoDB();
 //Routes
 app.use('/todo', require('./routes/todoRouter.js'))
 app.use('/api/auth', require('./routes/authRouter.js'))
+app.use('/api/main', expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'] }))//don't want users to create issues if they're not logged in
+app.use('/api/main/issues', require('./routes/issueRouter.js'))
 
 
 
