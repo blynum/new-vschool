@@ -34,9 +34,18 @@ app.use('/api/main/issues', require('./routes/issueRouter.js'))
 
 //Error handler middleware
 app.use((err, req, res, next) => {
+  // Log the error for debugging purposes
   console.error(err);
-  res.status(500).json({ errorMessage: err.message });
+
+  // Handle specific error for unauthorized access
+  if (err.name === "UnauthorizedError") {
+    return res.status(err.status).json({ errorMessage: "Unauthorized access" });
+  }
+
+  // Catch-all for other errors
+  return res.status(500).json({ errorMessage: err.message });
 });
+
 
 
 
